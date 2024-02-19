@@ -4,13 +4,14 @@
   "description": "api test course with jest",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --roots test/hw21"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "axios": "^1.6.7",
+    "dotenv": "^16.4.4",
     "jest": "^29.7.0"
   }
 }

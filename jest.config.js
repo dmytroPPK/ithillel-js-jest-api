@@ -4,6 +4,9 @@
  */
 
 /** @type {import('jest').Config} */
+
+require("dotenv").config({path:"./env/.env"})
+
 const config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -60,7 +63,7 @@ const config = {
   // forceCoverageMatch: [],
 
   // A path to a module which exports an async function that is triggered once before all test suites
-  // globalSetup: undefined,
+  globalSetup: "./setup/globalSetup.js",
 
   // A path to a module which exports an async function that is triggered once after all test suites
   // globalTeardown: undefined,
@@ -69,7 +72,7 @@ const config = {
   // globals: {},
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
-  // maxWorkers: "50%",
+  maxWorkers: "1",
 
   // An array of directory names to be searched recursively up from the requiring module's location
   // moduleDirectories: [
@@ -107,7 +110,7 @@ const config = {
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  // reporters: undefined,
+  reporters: ["default"],
 
   // Automatically reset mock state before every test
   // resetMocks: false,
